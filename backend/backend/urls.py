@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('olx_app.urls')),
     path('adminpanel/',include('adminside.urls')),
+    path('users/',include('userside.urls')),
 
 ]
 if settings.DEBUG:

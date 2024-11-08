@@ -9,7 +9,7 @@ function Home() {
   }
 
   useEffect(()=>{
-    axios.get('http://localhost:8000/adminpanel/prods/')
+    axios.get('http://localhost:8000/users/prods/')
       .then((response)=>{
         setProducts(response.data)
       })

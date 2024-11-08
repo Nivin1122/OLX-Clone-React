@@ -18,7 +18,3 @@ def add_products(request):
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
     
 
-class AllproductsListView(generics.ListCreateAPIView):
-    queryset = All_Products.objects.all()
-    serializer_class = AllProductSrializers
-    
