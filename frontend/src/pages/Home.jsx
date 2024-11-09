@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [ products,setProducts ] = useState([]);
 
-  const product_details = () =>{
-
-  }
-
   useEffect(()=>{
+    
     axios.get('http://localhost:8000/users/prods/')
       .then((response)=>{
         setProducts(response.data)
@@ -29,7 +27,9 @@ function Home() {
             <img src={product.images} alt="" />
             <h3>{ product.product_name }</h3>
             <p>{ product.price }</p>
-            <button onClick={product_details}>View Details</button>
+            <Link to={`/users/prods/${product.id}`}>
+                <button>View Details</button>
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function AddProduct() {
     const [p_name,setPname] = useState("")
     const [p_price, setPprice] = useState("")
     const [image,setImage] = useState(null)
+    const navigate = useNavigate();
 
     const handleImageChange = (event) =>{
         const file = event.target.files[0];
@@ -28,6 +30,9 @@ function AddProduct() {
                 },
             });
             console.log("Product added successfully:", response.data);
+            if (response.data){
+                navigate("/")
+            }
         }catch(error){
             console.error("Error adding product:", error);
         }

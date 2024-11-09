@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from userside import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('olx_app.urls')),
     path('adminpanel/',include('adminside.urls')),
     path('users/',include('userside.urls')),
+    path('users/prods/<int:p_id>/', views.product_details, name='product_details'),
 
 ]
 if settings.DEBUG:
