@@ -16,6 +16,7 @@ function Login() {
             });
             localStorage.setItem('access_token', response.data.access);
             localStorage.setItem('refresh_token', response.data.refresh);
+            localStorage.setItem('is_admin',response.data.is_admin);
             alert("Logged in successfully");
             if (response.status === 200){
                 navigate("/")

@@ -29,5 +29,7 @@ class Login_View(APIView):
             return Response({
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
+                'is_admin' : user.is_superuser
+                
             },status=status.HTTP_200_OK)
         return Response({"error":"Invalid credentials"},status=status.HTTP_401_UNAUTHORIZED)
