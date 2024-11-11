@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/navbar/Navbar';
+import Subnavbar from '../components/subnavbar/Subnavbar';
 
 function Home() {
   const [ products,setProducts ] = useState([]);
@@ -18,10 +20,13 @@ function Home() {
   },[])
 
   return (
+    
     <div>
-      <h2>Product List</h2>
-
+      <Navbar />
+      <Subnavbar/>
+      
       <ul>
+        
         {products.map((product)=>(
           <li key={product.id}>
             <img src={product.images} alt="" />
@@ -33,6 +38,7 @@ function Home() {
           </li>
         ))}
       </ul>
+      
     </div>
   )
 }

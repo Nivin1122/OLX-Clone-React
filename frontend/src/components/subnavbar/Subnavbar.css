@@ -1,0 +1,26 @@
+.sub_headings {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sub_headings ul {
+    display: flex; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sub_headings ul li {
+    margin-right: 20px; 
+  }
+  
+  .sub_headings ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .sub_headings ul li a:hover {
+    text-decoration: underline;
+  }
