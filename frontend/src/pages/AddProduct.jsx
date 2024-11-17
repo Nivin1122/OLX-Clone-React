@@ -1,6 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import "./Addproduct.css"
+import Navbar from '../components/navbar/Navbar';
+import Subnavbar from '../components/subnavbar/Subnavbar';
 
 function AddProduct() {
     const [p_name,setPname] = useState("")
@@ -39,25 +42,44 @@ function AddProduct() {
     }
 
   return (
-    <div>
-        <h1>Add Products</h1>
+    <>
+        <Navbar/>
+        <Subnavbar/>
 
-            <form onSubmit={add_all_products}>
-            <label htmlFor="">Product Name</label>
-            <input type="text" value={p_name} onChange={(e)=>setPname(e.target.value)} />
-            <br />
+    <div className="add-product-container">
+        
+            <h1 className="add-product-title">Add Product</h1>
+            <form className="add-product-form" onSubmit={add_all_products}>
+                <label>Product Name</label>
+                <input 
+                    type="text" 
+                    value={p_name} 
+                    onChange={(e) => setPname(e.target.value)} 
+                    className="form-input"
+                    placeholder="Enter product name"
+                />
 
-            <label htmlFor="">Product Image</label>
-            <input type='file' onChange={handleImageChange}/>
-            <br />
+                <label>Product Image</label>
+                <input 
+                    type="file" 
+                    onChange={handleImageChange} 
+                    className="form-input"
+                />
 
-            <label htmlFor="">Product Price</label>
-            <input type='text' value={p_price} onChange={(e)=>setPprice(e.target.value)}/>
-            <br />
+                <label>Product Price</label>
+                <input 
+                    type="text" 
+                    value={p_price} 
+                    onChange={(e) => setPprice(e.target.value)} 
+                    className="form-input"
+                    placeholder="Enter product price"
+                />
 
-            <button type='submit'>Add Product</button>
-        </form>
-    </div>
+                <button type="submit" className="submit-button">Add Product</button>
+            </form>
+        </div>
+        </>
+
   )
 }
 

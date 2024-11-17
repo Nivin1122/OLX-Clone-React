@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import olxlogo from '../../src/assets/images/olx-logo.png'
+import './signup.css'
 
 function Signup() {
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
-    const navigate = useNavigate();  
+    const navigate = useNavigate();
 
 
     const addUsers = async ()=>{
@@ -26,12 +28,36 @@ function Signup() {
 
   return (
     <div>
-        <h2>Signup Page</h2>
-        <label htmlFor="">Username</label>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/><br />
-        <label htmlFor="">Password</label>
-        <input type="text" value={password} onChange={(e)=> setPassword(e.target.value)}/><br />
-        <button onClick={addUsers}>signup</button>
+        <div className="signupParentDiv">
+            <img width="200px" height="200px" src={olxlogo} alt="Logo" />
+            <br />
+            <label htmlFor="username">Username</label>
+            <br />
+            <input
+                className="input"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+            />
+            <br />
+            <label htmlFor="password">Password</label>
+            <br />
+            <input
+                className="input"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+            />
+            <br />
+            <br />
+            <button type="submit" onClick={addUsers}>Signup</button>
+        </div>
     </div>
   )
 }

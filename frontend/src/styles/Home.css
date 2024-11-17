@@ -1,0 +1,282 @@
+*{
+    font-family: system-ui;
+}
+
+.product-list-container{
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.product-list-container li img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    /* border: 1px solid gray; */
+}
+
+.product-list-container li {
+    position: relative;
+    list-style: none;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.product-price{
+    font-size: 20px;
+    font-weight: bold;
+    color: #002f34;
+    margin: 0px;
+}
+
+.product-title{
+    font-size: 16px;
+    color: #002f34;
+    margin: 5px 0px;
+}
+
+.product-like-icon{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.596);
+    padding: 0px 13px;
+    margin: 0px;
+    border-radius: 50px;
+}
+
+.product-link{
+    font-size: 13px;
+    color: #002f34;
+    text-decoration: none;
+}
+
+.logout_button{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ebeeef;
+    height: 65px;
+    padding: 0px 15px;
+  }
+  .inputs{
+    display: flex;
+    align-items: center;
+  }
+  .searchstate{
+    width: 250px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-right: none;
+    height: 39px;
+    font-size: 16px;
+  }
+  .seatchImg{
+    border: none;
+  }
+  .header-transparant-btn-left{
+    background-color: #fff;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black; 
+    border-left: 2px solid black;
+    border-right: none; 
+    height: 45px;
+  }
+  .header-transparant-btn-right{
+    background-color: #fff;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black; 
+    border-left: none;
+    border-right: 2px solid black; 
+    height: 45px;
+  }
+  .state{
+    display: flex;
+    align-items: center;
+  }
+  .find-items{
+    display: flex;
+    align-items: center;
+  }
+  .searchProducts{
+    width: 500px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: none;
+    height: 39px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  .header-btns{
+    display: flex;
+    align-items: center;
+  }
+  .search-btn{
+    background-color: #002f34;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black; 
+    border-left: none;
+    border-right: 2px solid black; 
+    height: 45px;
+    width: 50px;
+    border-radius: 0px 6px 6px 0px;
+  }
+  .language-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: #002f34;
+  }
+  button{
+    cursor: pointer;
+  }
+  .language{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .login-btn{
+    border: none;
+    font-size: 17px;
+    text-decoration: underline;
+    color: #002f34;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .categories{
+    display: flex;
+    align-items: center;
+    color: #002f34;
+    height: 40px;
+    margin: 5px 0px;
+    background-color: #fff;
+  }
+  .all-cateogy-btn{
+    background-color: #fff;
+    border: none;
+    font-weight: bold;
+  }
+  .allCategory{
+    display: flex;
+    align-items: center;
+  }
+  .category-list-list{
+    display: flex;
+    list-style: none;
+  }
+  .category-listitem{
+    margin: 0px 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .space{
+    height: 300px;
+    background-color: rgb(238, 237, 237);
+  }
+  .products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .products-title{
+    color: rgb(65, 64, 64);
+    font-weight: 400;
+  }
+  .products-wrapper{
+    padding: 0px 40px;
+  }
+  .card{
+    margin: 10px;
+  }
+  .load-more-btn-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .load-more-btn{
+    height: 45px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .try-olx-app-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+  .try-olx-app{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .try-olx-para{
+    font-size: 20px;
+  }
+  .mobile-app-images{
+    display: flex;
+  }
+  .space-bottom{
+    height: 100vh;
+  }
+  .footer-1{
+    padding: 10px;
+    background-color: #ebeeef;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer-1-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-1-listitem{
+    color: gray;
+    font-size: 14px;
+    margin: 5px 10px ;
+  }
+  .footer-1-title{
+    font-weight: 500;
+  }
+  .footer-1-list-social{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-2{
+    background-color: #002f34;
+    display: flex;
+  }
+  .footer-2-right{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer-3{
+    background-color: #002f34;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+  }
+  .footer-3-text{
+    color: #fff;
+    font-size: 12px;
+  }

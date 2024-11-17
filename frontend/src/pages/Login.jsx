@@ -2,11 +2,18 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "./Login.css";
+import olxlogo from '../../src/assets/images/olx-logo.png'
+
 
 function Login() {
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
     const navigate = useNavigate();
+
+    const handleSignupNavigation = ()=>{
+        navigate("/signup")
+    }
 
     const addloginusers = async () => {
         try{
@@ -29,12 +36,52 @@ function Login() {
 
   return (
     <div>
-        <h2>Login Page</h2>
-        <label htmlFor="">Username</label>
-        <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}/><br />
-        <label htmlFor="">Password</label>
-        <input type="text" value={password} onChange={(e)=>setPassword(e.target.value)}/><br />
-        <button type='submit' onClick={addloginusers}>Login</button>
+        <div className="loginParentDiv">
+            <img width="200px" height="200px" src={olxlogo} alt="Logo" />
+            <br />
+            {/* <form onSubmit={addloginusers}> */}
+                <label htmlFor="email">username</label>
+                <br />
+                <input
+                    className="input"
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    id="name"
+                    name="username"
+                    placeholder="Enter your username"
+                />
+                <br />
+                <label htmlFor="password">Password</label>
+                <br />
+                <input
+                    className="input"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                />
+                <br />
+                <br />
+                <button type="submit" onClick={addloginusers}>Login</button>
+            {/* </form> */}
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+                >
+                <span
+                onClick={handleSignupNavigation}
+                style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}
+                >
+                    Signup
+                </span>
+                </div>
+        </div>
     </div>
   )
 }

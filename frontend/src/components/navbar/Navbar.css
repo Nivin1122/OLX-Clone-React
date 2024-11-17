@@ -1,99 +1,42 @@
-.navbar {
-    background-color: #dbd8d8;
-    padding: 10px 10px;
-    width: 100%;
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-    color: rgb(174, 164, 164);
-  }
-  
-  .navbar_logo .logo {
-    width: 50px;
-    margin-left: 20px;
-  }
-  
-  .navbar_select_city {
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .search_city{
-    padding: 18px;
-    border: 2px solid #1e1d1d;
-    border-radius: 5px;
-    outline: none;
-    width: 300px;
-    /* margin-right: 300px; */
+*{
+  box-sizing: border-box;
+}
 
-  }
-  .header-down-arrow-btn{
-    background-color: #fff;
-    color: black;
-    position: relative;
-    right: 40px;
-    border: none;
-    height: 30px;
-  }
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .search_items {
-    padding: 18px;
-    border: 2px solid #1e1d1d;
-    border-radius: 7px;
-    outline: none;
-    width: 700px;
-  }
-  .header-search-btn{
-    position: relative;
-    height: 50px;
-    background-color: #fff;
-  }
-  
-  .search_city::placeholder,
-  .search_items::placeholder {
-    color: #aaa;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-left: 20px;
-  }
-  
-  ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  ul li a:hover {
-    text-decoration: underline;
-  }
-  
- 
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .search_city,
-    .search_items {
-      width: 100%; 
-      margin-bottom: 10px;
-    }
-  
-    ul {
-      margin-top: 10px;
-    }
-  }
-  
+.header ul{
+  display: flex;
+  list-style: none;
+}
+
+.navbar_select_city input, .navbar_select_city button{
+  height: 50px;
+}
+
+.navbar_select_city button{
+  border: 1px solid black;
+}
+
+.navbar_select_city{
+  display: flex;
+  align-items: center;
+}
+
+.find_items input,.find_items button{
+  height: 50px;
+}
+
+.find_items{
+  align-items: center;
+  display: flex;
+}
+
+
+.home_about{
+  display: flex;
+  gap: 20px;
+}
